@@ -22,7 +22,12 @@ let playersQueue = [{
 }]
 
 app.post('/players/', function(request, response){
-  playersQueue.push({id: playersQueue.length, player: response.body.player})
+  console.log(request.query.player);
+  playersQueue.push({id: playersQueue.length + 1, player: request.query.player})
+  response.json({
+    success: true,
+    message: 'ALERT: MISSILE ADDED!'
+  })
 })
 
 app.get('/players/', function(request, response){
