@@ -16,11 +16,11 @@ app.use(cors({ origin: true }));
 let playersQueue = [
   {
     id: 1,
-    player: "Test Player 1"
+    player: "Kyle the Butthole"
   },
   {
     id: 2,
-    player: "Test Player 2"
+    player: "Shifu React Dan"
   }
 ];
 
