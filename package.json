@@ -1,0 +1,27 @@
+{
+  "name": "missleserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JayFarnsworth/MissleTestBackEnd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JayFarnsworth/MissleTestBackEnd/issues"
+  },
+  "homepage": "https://github.com/JayFarnsworth/MissleTestBackEnd#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "gitignore": "^0.6.0",
+    "morgan": "^1.9.0"
+  }
+}
