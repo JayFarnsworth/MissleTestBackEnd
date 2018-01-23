@@ -30,6 +30,23 @@ app.post('/players/', function(request, response){
   })
 })
 
+app.post('/remove/', function(request, response){
+  for (var i = 0; i < playersQueue.length; i++) {
+    console.log(playersQueue[i]);
+    if (playersQueue[i].player == request.query.player){
+      console.log(i);
+      playersQueue.splice(i, 1)
+    }
+  }
+  // console.log(playersQueue.filter((item)=>{
+  //   return item.player == request.query.player
+  // }).indexOf())
+  response.json({
+    success: true,
+    message: 'ALERT: MISSILE REMOVED!'
+  })
+})
+
 app.get('/players/', function(request, response){
   response.json(playersQueue)
 })
