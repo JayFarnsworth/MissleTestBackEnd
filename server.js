@@ -20,7 +20,7 @@ let playersQueue = [
   },
   {
     id: 2,
-    player: "Shifu React Dan"
+    player: "Sax Man James"
   }
 ];
 
