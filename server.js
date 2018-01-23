@@ -13,6 +13,21 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(morgan(devMode ? 'dev' : 'combined'))
 app.use(cors({origin: true}))
 
+let playersQueue = [{
+  id: 1,
+  player: 'Test Player 1'
+},{
+  id: 2,
+  player: 'Test Player 2'
+}]
+
+app.post('/players/', function(request, response){
+  playersQueue.push({id: playersQueue.length, player: response.body.player})
+})
+
+app.get('/players/', function(request, response){
+  response.json(playersQueue)
+})
 // TODO: ADD (MOUNT) YOUR MIDDLEWARE (ROUTES) HERE
 // ^^^ Example: app.use('/v1/kitten', require('./routes/kitten'))
 // ^^^ Example: app.use('/cats', require('./routes/kitten'))
